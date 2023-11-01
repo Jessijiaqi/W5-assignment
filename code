@@ -1,0 +1,59 @@
+# This file contains the Command Line Interface (CLI) for
+# the Tic-Tac-Toe game. This is where input and output happens.
+# For core game logic, see logic.py.
+
+from logic import make_empty_board
+# This file is where game logic lives. No input
+# or output happens here. The logic in this file
+# should be unit-testable.
+
+
+def make_empty_board():
+    return [
+        [None, None, None],
+        [None, None, None],
+        [None, None, None],
+    ]
+
+
+def get_winner(board):
+    """Determines the winner of the given board.
+    Returns 'X', 'O', or None."""
+    return None  # FIXME
+
+
+def other_player(player):
+    """Given the character for a player, returns the other player."""
+    return "O"  # FIXME
+
+# Reminder to check all the tests
+
+if __name__ == '__main__':
+    board = make_empty_board()
+    winner = None
+    current_player='x'
+    while winner == None:
+        print("TODO: take a turn!")
+        print_board(board)
+        move=input(f"{current_player}, enter your move(row,column):")
+        try:
+            row, column=map(int,move.split(","))
+            if board[row],[column]==[None,None] :
+                make_move(board,row,column, current_player)
+                else:
+                    print("Invalid move.")
+        winner=check_winner(board,current_player)
+        if winner is None:
+            if current_player == 'O' :
+                other_player = 'X' 
+                else:
+                     other_player = 'O'
+            print(f"{current_player}" turn)
+        print_board(board)
+
+
+        # TODO: Show the board to the user.
+        # TODO: Input a move from the player.
+        # TODO: Update the board.
+        # TODO: Update who's turn it is.
+        winner = 'X'  # FIXME

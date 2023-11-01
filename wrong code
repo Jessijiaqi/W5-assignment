@@ -1,0 +1,89 @@
+def make_empty_board():
+    return [
+        [None, None, None],
+        [None, None, None],
+        [None, None, None],
+    ]
+
+
+def get_winner(board):
+    """Determines the winner of the given board.
+    Returns 'X', 'O', or None."""
+    return None  # FIXME
+
+
+def other_player(player):
+    """Given the character for a player, returns the other player."""
+    return "O"  # FIXME
+# This file contains the Command Line Interface (CLI) for
+# the Tic-Tac-Toe game. This is where input and output happens.
+# For core game logic, see logic.py.
+
+# This file is where game logic lives. No input
+# or output happens here. The logic in this file
+# should be unit-testable.
+
+
+def make_empty_board():
+    return [
+        [None, None, None],
+        [None, None, None],
+        [None, None, None],
+    ]
+
+
+def get_winner(board):
+    """Determines the winner of the given board.
+    Returns 'X', 'O', or None."""
+    return None  # FIXME
+
+
+def other_player(player):
+    """Given the character for a player, returns the other player."""
+    return "O"  # FIXME
+
+def print_board(board):
+    return
+
+# Reminder to check all the tests
+
+if __name__ == '__main__':
+    board = make_empty_board()
+    winner = None
+    players = ['X', 'O']
+    current_player_index = 0
+    while True:  # 创建无限循环
+        current_player = players[current_player_index]
+        print(board)
+        move = input(f"{current_player}, enter your move (row, column): ")
+        
+        row, column=map(int,move.split(","))
+        def make_move(board,row,column,player):
+            return
+        if board[row][column]is None:
+          board[row][column]=current_player
+        else:
+                print("Invalid move.")
+                continue
+      
+        def check_winner(board,current_player):
+        
+          winner=check_winner(board,current_player)
+        if winner is None:  
+            current_player=other_player(current_player)
+            if current_player == 'X' :
+                current_player == 'O' 
+            else:
+                 current_player == 'X'
+            print(f"{current_player} turn")
+       
+        current_player_index = (current_player_index + 1) % len(players)
+
+    
+
+
+        # TODO: Show the board to the user.
+        # TODO: Input a move from the player.
+        # TODO: Update the board.
+        # TODO: Update who's turn it is.
+        winner = 'X'  # FIXME
